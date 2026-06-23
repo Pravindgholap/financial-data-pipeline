@@ -7,20 +7,7 @@ A production-ready ETL pipeline for processing financial market data with anomal
 [![Pandas](https://img.shields.io/badge/pandas-2.0+-blue.svg)](https://pandas.pydata.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Architecture
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-│ Alpha │ │ Data │ │ Feature │ │ Anomaly │
-│ Vantage │────▶│ Cleaning │────▶│ Engineering │────▶│ Detection │
-│ API │ │ │ │ │ │ │
-└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
-│
-▼
-┌─────────────┐
-│ SQL/CSV │
-│ Storage │
-└─────────────┘
 
-text
 
 ## Features
 
