@@ -1,0 +1,5 @@
+# Create the data directories with .gitkeep files
+mkdir -p data/raw data/processed data/cache
+touch data/raw/.gitkeep
+touch data/processed/.gitkeep
+touch data/cache/.gitkeep
