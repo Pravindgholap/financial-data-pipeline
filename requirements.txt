@@ -1,0 +1,33 @@
+# Core data processing
+pandas>=1.5.0
+numpy>=1.24.0
+pyarrow>=12.0.0
+
+# API Integration - Use the correct Alpha Vantage package
+alpha-vantage>=2.3.0
+requests>=2.28.0
+python-dotenv>=1.0.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Automation
+schedule>=1.2.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Configuration
+pyyaml>=6.0
+
+# Error handling
+tenacity>=8.2.0
+
+# Optional: For better performance
+numba>=0.57.0

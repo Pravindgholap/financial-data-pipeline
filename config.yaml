@@ -1,0 +1,31 @@
+# Financial Data Pipeline Configuration
+
+api:
+  alpha_vantage_key: "YOUR_API_KEY_HERE"  # Get from https://www.alphavantage.co/support/#api-key
+  symbols:
+    - AAPL
+    - GOOGL
+    - MSFT
+    - AMZN
+    - TSLA
+  output_size: "compact"  # 'compact' for last 100 days, 'full' for full history
+
+pipeline:
+  chunksize: 100000
+  use_cache: true
+  cache_days: 1
+  schedule_interval_hours: 24  # Run once per day
+
+anomaly_detection:
+  price_zscore_threshold: 3.0   # Number of standard deviations for price spike
+  volume_ratio_threshold: 5.0   # Volume > 5x moving average
+  vwap_divergence_threshold: 2.0  # Percent deviation from VWAP
+
+database:
+  enabled: false
+  connection_string: ""  # Example: "postgresql://user:password@localhost:5432/finance"
+  # If not enabled, will save to CSV/Parquet files
+
+logging:
+  level: "INFO"
+  file: "pipeline.log"
